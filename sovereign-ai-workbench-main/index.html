@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Sovereign AI Workbench</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="cursor-glow"></div>
+<div class="bg-grid"></div>
+<div class="particle-field" aria-hidden="true"></div>
+
+
+<div class="app-shell">
+<aside class="sidebar">
+  <div class="brand">
+    <div class="brand-mark"><span>SA</span><i></i></div>
+    <div><h1>Sovereign AI</h1><p>WORKBENCH</p></div>
+  </div>
+
+  <div class="privacy-card"><span class="shield">◆</span><div><strong>PRIVATE WORKSPACE</strong><small>Controlled enterprise environment</small></div></div>
+
+  <nav>
+    <button class="nav-item active" data-page="dashboard"><span>⌂</span> Control Center</button>
+    <button class="nav-item" data-page="workspace"><span>◈</span> Agent Workspace</button>
+    <button class="nav-item" data-page="files"><span>▣</span> Files</button>
+    <button class="nav-item" data-page="audit"><span>≡</span> Audit Log</button>
+    <button class="nav-item" data-page="security"><span>◇</span> Security Monitor</button>
+    <button class="nav-item" data-page="settings"><span>⚙</span> Settings</button>
+  </nav>
+
+  <div class="sidebar-footer">
+    <div class="user-card"><div class="avatar">AK</div><div><strong>Authorized User</strong><small>MRPL • Analyst</small></div><span class="status-dot"></span></div>
+  </div>
+</aside>
+
+<main class="main">
+<header class="topbar">
+  <div><span class="eyebrow">MRPL • SOVEREIGN AI WORKBENCH</span><h2 id="page-title">Control Center</h2></div>
+  <div class="top-actions"><div class="secure-pill"><span class="pulse-dot"></span> Active Session</div><button class="icon-btn ripple" id="notifications">◉</button></div>
+</header>
+
+<section id="dashboard" class="page active animated-page">
+  <div class="hero-card reveal">
+    <div class="scanline"></div>
+    <div class="hero-copy">
+      <span class="tag">PRIVATE • CONTROLLED • TRACEABLE</span>
+      <h3>Turn confidential work<br><span>into controlled intelligence.</span></h3>
+      <p>Monitor enterprise operations, review activity and enter the controlled agent workspace when work needs to be executed.</p>
+      <button class="primary-btn ripple magnetic" data-go="workspace">Open Agent Workspace <span>→</span></button>
+    </div>
+    <div class="hero-visual">
+      <div class="ai-core"><div class="core-inner"></div></div>
+      <div class="orbit o1"></div><div class="orbit o2"></div><div class="orbit o3"></div>
+      <span class="node n1">DOCS</span><span class="node n2">DATA</span><span class="node n3">VISION</span><span class="node n4">AGENT</span>
+      <div class="energy-ring"></div>
+    </div>
+  </div>
+
+  <div id="dashCards" class="stats-grid sortable">
+    <div class="stat-card tilt" draggable="true"><span>ACTIVE TASKS</span><strong id="activeTasks" data-count="0">0</strong><small>Agent workflows</small><div class="spark"><i></i><i></i><i></i><i></i><i></i></div></div>
+    <div class="stat-card tilt" draggable="true"><span>WORKSPACE FILES</span><strong id="fileCount" data-count="0">0</strong><small>Current session</small><div class="spark"><i></i><i></i><i></i><i></i><i></i></div></div>
+    <div class="stat-card tilt" draggable="true"><span>SECURITY EVENTS</span><strong data-count="0">0</strong><small>Tracked events</small><div class="spark"><i></i><i></i><i></i><i></i><i></i></div></div>
+    <div class="stat-card tilt" draggable="true"><span>EXTERNAL CALLS</span><strong data-count="0">0</strong><small>Policy controlled</small><div class="spark"><i></i><i></i><i></i><i></i><i></i></div></div>
+  </div>
+
+  <div class="section-grid">
+    <div class="panel reveal">
+      <div class="panel-head"><div><span class="eyebrow">AGENT ORCHESTRATION</span><h3>Workflow at a glance</h3></div><span class="live-chip"><b></b> LIVE VIEW</span></div>
+      <div class="visual-flow">
+        <div class="flow-line"></div>
+        <div class="flow-node active"><span>01</span><strong>SECURITY</strong><small>Check</small></div>
+        <div class="flow-node"><span>02</span><strong>CLASSIFY</strong><small>Task</small></div>
+        <div class="flow-node"><span>03</span><strong>RETRIEVE</strong><small>Context</small></div>
+        <div class="flow-node"><span>04</span><strong>REASON</strong><small>Agent</small></div>
+        <div class="flow-node"><span>05</span><strong>VERIFY</strong><small>Evidence</small></div>
+        <div class="flow-node"><span>06</span><strong>DELIVER</strong><small>Output</small></div>
+      </div>
+    </div>
+    <div class="panel reveal">
+      <div class="panel-head"><div><span class="eyebrow">SYSTEM HEALTH</span><h3>Workbench status</h3></div></div>
+      <div class="health-visual"><div class="health-ring"><span>READY</span></div><div class="health-lines"><div><span>Workspace</span><b>READY</b></div><div><span>Security policy</span><b>ACTIVE</b></div><div><span>Agent service</span><b>READY</b></div></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="workspace" class="page animated-page">
+<div class="workspace-layout">
+<div class="workspace-main">
+  <div class="panel task-panel reveal">
+    <div class="panel-head"><div><span class="eyebrow">CONTROLLED EXECUTION</span><h3>Agent Task Workspace</h3></div><span class="lock">▣ PRIVATE</span></div>
+    <textarea id="taskInput" placeholder="Describe the task you want the agent to perform...
+
+Example: Compare the maintenance values in the uploaded reports and identify deviations requiring review."></textarea>
+    <div id="dropzone" class="dropzone">
+      <div class="upload-orbit"><span>↑</span></div><strong>Drag & drop documents</strong><span>PDF • Word • PowerPoint • Excel • CSV • Images</span>
+      <button class="secondary-btn ripple" id="browseBtn">Browse files</button><input id="fileInput" type="file" hidden multiple accept=".pdf,.png,.jpg,.jpeg,.tif,.tiff,.docx,.xlsx,.xlsm,.csv,.tsv,.pptx,.txt,.md,.markdown,.json">
+    </div>
+    <div id="filePreview" class="file-preview"></div>
+    <div class="task-actions"><div class="privacy-note">⌁ Files handled inside the controlled workspace</div><button class="primary-btn ripple magnetic" id="runTask">Run Agent <span>→</span></button></div>
+  </div>
+
+  <div class="panel reveal">
+    <div class="panel-head"><div><span class="eyebrow">EXECUTION TRACE</span><h3>Agent Progress</h3></div><span id="progressState" class="live-chip">IDLE</span></div>
+    <div id="workflow" class="workflow"></div>
+  </div>
+
+  <div class="panel result-panel reveal">
+    <div class="panel-head"><div><span class="eyebrow">VERIFIED OUTPUT</span><h3>AI Result</h3></div><button class="secondary-btn ripple" id="downloadResult">Download</button></div>
+    <div id="resultBox" class="result-box empty">Your verified result will appear here after the agent completes its workflow.</div>
+  </div>
+</div>
+<aside class="workspace-side">
+  <div class="panel evidence reveal"><div class="panel-head"><div><span class="eyebrow">TRACEABILITY</span><h3>Evidence</h3></div></div><div id="evidenceList" class="evidence-list"><div class="empty-state">Evidence from processed files will appear here.</div></div></div>
+  <div class="panel reveal"><div class="panel-head"><div><span class="eyebrow">DELIVERABLES</span><h3>Generated Files</h3></div></div><div id="deliverables" class="deliverables"><div class="empty-state">No deliverables yet.</div></div></div>
+</aside>
+</div>
+</section>
+
+<section id="files" class="page animated-page"><div class="panel reveal"><div class="panel-head"><div><span class="eyebrow">WORKSPACE REPOSITORY</span><h3>Files</h3></div><button class="secondary-btn ripple" id="filesBrowse">+ Add files</button></div><div id="filesTable" class="file-table empty-state">No files uploaded in this session.</div></div></section>
+
+<section id="audit" class="page animated-page"><div class="panel reveal"><div class="panel-head"><div><span class="eyebrow">TRACEABILITY</span><h3>Audit Log</h3></div><span class="secure-pill">EVENT HISTORY</span></div><p class="helper-text">Records important actions performed in the workbench — such as file uploads, task submissions, approvals and completed workflows.</p><div class="table-wrap"><table><thead><tr><th>TIME</th><th>EVENT</th><th>ACTOR</th><th>STATUS</th></tr></thead><tbody id="auditBody"></tbody></table></div></div></section>
+
+<section id="security" class="page animated-page"><div class="section-grid">
+<div class="panel reveal"><div class="panel-head"><div><span class="eyebrow">PROTECTION LAYER</span><h3>Security Events</h3></div></div>
+<div class="monitor-card"><span class="big-icon">◇</span><div><strong>Access control</strong><small>Authorization rules protect sensitive operations.</small></div><b class="ok">ACTIVE</b></div>
+<div class="monitor-card"><span class="big-icon">▣</span><div><strong>Data handling</strong><small>Workspace files remain under configured controls.</small></div><b class="ok">CONTROLLED</b></div>
+<div class="monitor-card"><span class="big-icon">●</span><div><strong>Approval gate</strong><small>Sensitive actions can pause for human review.</small></div><b class="ok">READY</b></div>
+</div>
+<div class="panel reveal"><div class="panel-head"><div><span class="eyebrow">SYSTEM TELEMETRY</span><h3>Activity Monitor</h3></div></div>
+<div class="telemetry"><div class="radar"></div><div class="radar-label">SYSTEM<br><b>MONITOR</b></div></div>
+<div class="network-row"><span>Workspace requests</span><strong id="requestCount">0</strong></div><div class="network-row"><span>Blocked external calls</span><strong>0</strong></div>
+</div>
+</div></section>
+
+<section id="settings" class="page animated-page"><div class="panel settings-panel reveal"><div class="panel-head"><div><span class="eyebrow">SYSTEM CONFIGURATION</span><h3>Settings</h3></div></div>
+<label>Workspace mode<select><option>Private / Controlled</option><option>Internal Enterprise</option></select></label>
+<label>AI runtime<input value="Configured by backend service" readonly></label>
+<label>Interface theme<input value="Dark Blue AI Enterprise" readonly></label>
+<label>Approval policy<select><option>Require approval for sensitive deliverables</option><option>Always require human approval</option></select></label>
+<button class="primary-btn ripple">Save Configuration</button>
+</div></section>
+</main>
+</div>
+
+<div id="toast" class="toast"></div>
+<div id="approvalModal" class="modal"><div class="modal-card">
+<span class="tag">HUMAN-IN-THE-LOOP</span><h3>Approval required</h3><p>The agent has reached a review gate. Check the proposed result before continuing to deliverable generation.</p>
+<div class="approval-summary"><span>Task</span><strong id="approvalTask">—</strong><span>Review</span><strong>Evidence verification completed</strong></div>
+<div class="modal-actions"><button class="secondary-btn ripple" id="rejectApproval">Reject</button><button class="primary-btn ripple" id="approveApproval">Approve & Continue →</button></div>
+</div></div>
+
+<script src="app.js"></script>
+</body>
+</html>

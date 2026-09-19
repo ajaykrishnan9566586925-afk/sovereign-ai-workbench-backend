@@ -1,0 +1,18 @@
+2026-09-17 14:40:38,444 | {"timestamp": "2026-09-17T14:40:38", "event": "task_classified", "task_category": "rag", "route_reason": "Keywords indicate document retrieval/RAG.", "input_type": "text", "selected_model": "qwen3:8b"}
+2026-09-17 14:40:38,447 | {"timestamp": "2026-09-17T14:40:38", "event": "plan_created", "task_category": "rag", "tool_call_count": 1}
+2026-09-17 14:40:38,447 | {"timestamp": "2026-09-17T14:40:38", "event": "tool_executed", "tool": "local_rag_search", "status": "success"}
+2026-09-17 14:40:38,447 | {"timestamp": "2026-09-17T14:40:38", "event": "evidence_verified", "evidence_count": 1, "confidence": 0.65, "verified": true}
+2026-09-17 14:43:39,394 | {"timestamp": "2026-09-17T14:43:39", "event": "answer_generated", "task_category": "rag", "model": "qwen3:8b", "evidence_confidence": 0.65, "approval_required": false}
+2026-09-17 14:43:47,869 | {"timestamp": "2026-09-17T14:43:47", "event": "task_classified", "task_category": "general", "route_reason": "General text question; local Qwen direct answer route.", "input_type": "text", "selected_model": "qwen3:8b"}
+2026-09-17 14:43:47,869 | {"timestamp": "2026-09-17T14:43:47", "event": "plan_created", "task_category": "general", "tool_call_count": 0}
+2026-09-17 14:43:47,869 | {"timestamp": "2026-09-17T14:43:47", "event": "evidence_verified", "evidence_count": 0, "confidence": 0.5, "verified": true}
+2026-09-17 14:44:57,977 | {"timestamp": "2026-09-17T14:44:57", "event": "answer_generated", "task_category": "general", "model": "qwen3:8b", "evidence_confidence": 0.5, "approval_required": false}
+2026-09-17 14:45:39,945 | {"timestamp": "2026-09-17T14:45:39", "event": "task_classified", "task_category": "general", "route_reason": "General text question; local Qwen direct answer route.", "input_type": "text", "selected_model": "qwen3:8b"}
+2026-09-17 14:45:39,962 | {"timestamp": "2026-09-17T14:45:39", "event": "plan_created", "task_category": "general", "tool_call_count": 0}
+2026-09-17 14:45:39,962 | {"timestamp": "2026-09-17T14:45:39", "event": "evidence_verified", "evidence_count": 0, "confidence": 0.5, "verified": true}
+2026-09-17 14:46:21,293 | {"timestamp": "2026-09-17T14:46:21", "event": "answer_generated", "task_category": "general", "model": "qwen3:8b", "evidence_confidence": 0.5, "approval_required": false}
+2026-09-17 15:54:09,433 | {"timestamp": "2026-09-17T15:54:09", "event": "task_classified", "task_category": "rag", "route_reason": "Keywords indicate document retrieval/RAG.", "input_type": "text", "selected_model": "qwen3:8b"}
+2026-09-17 15:54:09,433 | {"timestamp": "2026-09-17T15:54:09", "event": "plan_created", "task_category": "rag", "tool_call_count": 1}
+2026-09-17 15:54:09,437 | {"timestamp": "2026-09-17T15:54:09", "event": "tool_executed", "tool": "local_rag_search", "status": "success"}
+2026-09-17 15:54:09,440 | {"timestamp": "2026-09-17T15:54:09", "event": "evidence_verified", "evidence_count": 1, "confidence": 0.65, "verified": true}
+2026-09-17 15:57:10,484 | {"timestamp": "2026-09-17T15:57:10", "event": "answer_generated", "task_category": "rag", "model": "qwen3:8b", "evidence_confidence": 0.65, "approval_required": false}

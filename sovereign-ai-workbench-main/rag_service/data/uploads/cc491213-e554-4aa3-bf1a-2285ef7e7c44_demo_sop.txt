@@ -1,0 +1,9 @@
+MRPL Demonstration Safety SOP
+
+Before entering a refinery process unit, personnel must wear a safety helmet,
+safety goggles, flame-resistant coveralls, gloves and safety shoes.
+
+Workers must follow permit-to-work procedures and report unsafe conditions
+to the shift supervisor immediately.
+
+Gas testing is required before entering a confined space.

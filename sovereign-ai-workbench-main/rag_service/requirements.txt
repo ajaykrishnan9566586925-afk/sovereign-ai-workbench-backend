@@ -1,0 +1,10 @@
+﻿fastapi
+uvicorn
+python-multipart
+pydantic
+qdrant-client
+sentence-transformers
+PyMuPDF
+pytesseract
+Pillow
+numpy

@@ -1,0 +1,13 @@
+{
+  "7c5c3bc0fadc191ad6b6bc6935f082705d799a882f059844c283b4ab1f5183f3": {
+    "document_id": "cc491213-e554-4aa3-bf1a-2285ef7e7c44",
+    "document_name": "demo_sop.txt",
+    "stored_path": "C:\\Users\\acer\\OneDrive\\Desktop\\sovereign-ai-workbench\\rag_service\\data\\uploads\\cc491213-e554-4aa3-bf1a-2285ef7e7c44_demo_sop.txt",
+    "access_classification": "INTERNAL",
+    "total_pages": 1,
+    "chunks_indexed": 1,
+    "ocr_used": false,
+    "ocr_confidence": null,
+    "ingested_at": "2026-09-17T20:51:45"
+  }
+}
